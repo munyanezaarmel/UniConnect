@@ -6,6 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
+    <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+     @vite('resources/css/app.css')
     <title>welcome | UniConnect </title>
 
     <!-- Bootstrap core CSS -->
@@ -31,11 +36,11 @@
     <!-- Custom styles for this template -->
     <link href="{!! url('assets/css/app.css') !!}" rel="stylesheet">
 </head>
-<body>
+<body >
     
     @include('layouts.partials.navbar')
 
-    <main class="container">
+    <main>
         @yield('content')
     </main>
 

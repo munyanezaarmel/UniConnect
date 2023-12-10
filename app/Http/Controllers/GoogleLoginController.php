@@ -12,7 +12,7 @@ class GoogleLoginController extends Controller
 {
     public function redirect()
     {
-        return Socialite::driver('google')->stateless()->redirect();
+        return Socialite::driver('google')->redirect();
     }
     /**
      * Create a new controller instance.
@@ -23,7 +23,7 @@ class GoogleLoginController extends Controller
     {
         try {
       
-            $user = Socialite::driver('google')->stateless()->user();
+            $user = Socialite::driver('google')->user();
        
             $finduser = User::where('google_id', $user->id)->first();
        
@@ -39,7 +39,7 @@ class GoogleLoginController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'google_id'=> $user->id,
-                    'password' => 'dummypass'// you can change auto generate password here and send it via email but you need to add checking that the user need to change the password for security reasons
+                    'password' => 'dummypass'
                 ]);
       
                 Auth::login($newUser);
