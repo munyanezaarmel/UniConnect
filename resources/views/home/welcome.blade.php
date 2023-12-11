@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
     <title>Welcome | UniConnect</title>
     <style>
@@ -25,6 +26,7 @@ background-size: cover;
     </style>
 </head>
 <body >
+   
    <div class="flex flex-col justify-center items-start">
     <h1 class="text-[#fff] mt-40 ml-20 text-[68px] w-[50%] ">UniConnect. Transforming Community Connections</h1>
     <p class="w-[30%] text-white ml-20 pt-5 text-[18px]">UniConnect is a social platform for communities. Join to interact with other members and share your knowledge, experience and ideas.</p>

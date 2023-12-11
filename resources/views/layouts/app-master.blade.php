@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
-    <script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    @livewireStyles
+    
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
      @vite('resources/css/app.css')
     <title>welcome | UniConnect </title>
 
@@ -29,6 +29,11 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
       }
     </style>
 
@@ -37,12 +42,12 @@
     <link href="{!! url('assets/css/app.css') !!}" rel="stylesheet">
 </head>
 <body >
-    
+  @livewire('livewire-ui-modal')
+    @livewireScripts
     @include('layouts.partials.navbar')
-
-    <main>
+    
         @yield('content')
-    </main>
+  
 
     <script src="{!! url('assets/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
   </body>

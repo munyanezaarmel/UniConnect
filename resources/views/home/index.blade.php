@@ -31,11 +31,12 @@
           <li class="flex gap-2 mb-3">
             <x-feathericon-settings class="h-6 w-9"/> Settings
           </li>
-       
-          <li class="flex gap-2 mb-3">
+          @auth
+         <a class="no-underline text-[#191919]" href="{{ route('logout.perform') }}"><li class="no-underline flex gap-2 mb-3">
             <x-eos-logout  class="h-6 w-9"/> Logout
-          </li>
-          <li><button class=" text-center bg-slate-700 px-2 py-2 text-white  rounded-md w-55">create posts</button></li>
+          </li></a>
+          @endauth
+          <li><button onclick="Livewire.dispatch('openModal', { component: 'create-posts' })"  class=" text-center bg-slate-700 px-2 py-2 text-white  rounded-md w-55">create posts</button></li>
         </ul>
    
         </aside>
@@ -62,6 +63,7 @@
         </div>
 
     </div>
+
   
   
 

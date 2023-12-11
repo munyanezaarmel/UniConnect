@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +26,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
-        Route::get('/welcome', function () {
-            return view('home/welcome');
-        });
+        Route::get('/welcome', [WelcomeController::class, 'index']);
+
 
         /**
          * Login Routes
