@@ -1,29 +1,33 @@
-<x-modal>
+<x-modal form-action="store">
+  <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
+    @csrf
     <x-slot name="title">
      Create posts
     </x-slot>
 
     <x-slot name="content">
-      <textarea name="post" placeholder="what's on your mind?" id="" cols="30" rows="10"></textarea>
-      <p>Pick tag for your posts(0/3)</p>
-      <div class="grid grid-cols-4">
-        <button>conservation</button>
-        <button>entrepreneurship</button>
-        <button>writing</button>
-        <button>tech</button>
-        <button>careers</button>
-        <button>social</button>
-        <button>music</button>
-        <button>travel</button>
-        <button>art</button>
-        <button>food</button>
+     
+        <div class="form-group">
+          <label for="title">description</label>
+          <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+      <div class="form-group">
+        <label for="body">tags</label>
+        <textarea class="form-control" id="tags" name="tags" rows="3" required></textarea>
       </div>
     </x-slot>
 
     <x-slot name="buttons">
      <div class="flex justify-around items-center">
-        <button>upload image</button>
-        <button>create post</button>
+      <div class="mb-3">
+        <label for="">Upload Image</label>
+        <input type="file" name="image"class="course form-control">
+        @error('image')
+        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+        @enderror
+    </div>
+        <button type="submit" class="btn btn-primary">Create Post</button>
      </div>
     </x-slot>
+  </form>
 </x-modal>

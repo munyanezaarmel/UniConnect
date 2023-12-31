@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,25 +42,28 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
     });
     Route::group(['middleware' => ['auth']], function() {
-        /**
-         * Dashboard Routes
-         */
-        
-        /**
-         * Logout Routes
-         */
+// Route::get('/posts', PostController::class .'@index')->name('posts.index');
+
+Route::get('/posts/create', PostController::class . '@create')->name('posts.create');
+
+Route::post('/posts', PostController::class .'@store')->name('posts.store');
+
+Route::get('/posts/{post}', PostController::class .'@show')->name('posts.show');
+
+Route::get('/posts/{post}/edit', PostController::class .'@edit')->name('posts.edit');
+
+Route::put('/posts/{post}', PostController::class .'@update')->name('posts.update');
+
+Route::delete('/posts/{post}', PostController::class .'@destroy')->name('posts.destroy');
+      
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
     
-    /**
-     * Verification Routes
-     */
+ 
     Route::group(['middleware' => ['auth']], function() {
            //only verified account can access with this group
     Route::group(['middleware' => ['verified']], function() {
-        /**
-         * Dashboard Routes
-         */
+     
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 });
         Route::get('/email/verify', 'VerificationController@show')->name('verification.notice');

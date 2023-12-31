@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->nullable()->change();
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('description');
+            $table->string('image')->nullable();
+            $table->string('tags');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->unique()->change();
-        });
+        Schema::dropIfExists('posts');
     }
 };

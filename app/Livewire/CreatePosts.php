@@ -10,4 +10,5 @@ class CreatePosts extends ModalComponent
     {
         return view('livewire.create-posts');
     }
+    
 }

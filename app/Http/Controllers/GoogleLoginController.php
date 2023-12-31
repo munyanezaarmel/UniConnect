@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
-use Exception;
 
 class GoogleLoginController extends Controller
 {
@@ -39,10 +40,12 @@ class GoogleLoginController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'google_id'=> $user->id,
-                    'password' => 'dummypass'
+                    'password' => 'dummypass',
+                    'profile_image' => $user->avatar 
                 ]);
       
                 Auth::login($newUser);
+                Session::put('profile_image', $user->avatar);
       
                 return redirect()->intended('/');
             }
