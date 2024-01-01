@@ -23,6 +23,7 @@
         "mkocansey/bladewind": "^2.4",
         "nesbot/carbon": "^2.67",
         "owenvoke/blade-fontawesome": "^2.5",
+        "usamamuneerchaudhary/commentify": "^1.4",
         "wire-elements/modal": "^2.0"
     },
     "require-dev": {

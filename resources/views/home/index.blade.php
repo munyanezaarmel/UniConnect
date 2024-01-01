@@ -90,5 +90,6 @@
                     </div>
                 </div>
             @endforeach
+            <livewire:comments :model="$post"/>
         </div>
 @endsection
