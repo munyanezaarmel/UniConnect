@@ -73,6 +73,7 @@
                     {{-- {{$listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png')}} --}}
                     <img src="{{$post->image ? asset('storage/' . $post->image) : asset('/images/image.png')}}" alt="Avatar" class="w-full h-auto object-cover">
                     <div class="px-6 py-4">
+                        
                       {{-- {{dd($post->image)}} --}}
                       
                         <p class="text-gray-700 text-base">
