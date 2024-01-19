@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +58,9 @@ Route::put('/posts/{post}', PostController::class .'@update')->name('posts.updat
 Route::delete('/posts/{post}', PostController::class .'@destroy')->name('posts.destroy');
       
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+        Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+
+
     });
     
  

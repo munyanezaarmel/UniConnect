@@ -25,7 +25,7 @@
                   <li class="flex gap-2 mb-3">
                     <x-zondicon-bookmark class="h-6 w-9"/> Bookmarks
                 </li>
-                <li class="flex gap-2 mb-3"><x-css-profile class="h-6 w-9 "/>Profile</li>
+                <a class="no-underline text-[#191919]"href="{{ route('profile') }}" ><li class="flex gap-2 mb-3"><x-css-profile class="h-6 w-9 "/>Profile</li></a>
               
        
           <li class="flex gap-2 mb-3">
@@ -69,7 +69,6 @@
                        
                     </div>
                     
-               
                     {{-- {{$listing->logo ? asset('storage/' . $listing->logo) : asset('/images/no-image.png')}} --}}
                     <img src="{{$post->image ? asset('storage/' . $post->image) : asset('/images/image.png')}}" alt="Avatar" class="w-full h-auto object-cover">
                     <div class="px-6 py-4">
