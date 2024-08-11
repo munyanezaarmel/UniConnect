@@ -1,0 +1,7 @@
+{
+  "/api/notifications/unread-count/route": "app/api/notifications/unread-count/route.js",
+  "/api/messages/unread-count/route": "app/api/messages/unread-count/route.js",
+  "/api/posts/for-you/route": "app/api/posts/for-you/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(main)/page": "app/(main)/page.js"
+}
