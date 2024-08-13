@@ -48,9 +48,8 @@ Run the development server:
 
 Copy code
 npm run dev
-make sure you are using port 3000 
+make sure you are using port 3000 ```
 
-## Screenshots
 
 
 ![image](https://github.com/user-attachments/assets/2fff0a68-ec74-4ce1-b252-09a7575593a9)
