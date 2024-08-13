@@ -9,43 +9,44 @@ import "./globals.css";
 import ReactQueryProvider from "./ReactQueryProvider";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+    src: "./fonts/GeistVF.woff",
+    variable: "--font-geist-sans",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+    src: "./fonts/GeistMonoVF.woff",
+    variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | bugbook",
-    default: "bugbook",
-  },
-  description: "The social media app for powernerds",
+    title: {
+        template: "%s | UniConnect",
+        default: "UniConnect",
+    },
+    description:
+        "A modern social media web application designed for university/college students to share ideas, stay connected and foster communities",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NextSSRPlugin routerConfig={extractRouterConfig(fileRouter)} />
-        <ReactQueryProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </ReactQueryProvider>
-        <Toaster />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                <NextSSRPlugin routerConfig={extractRouterConfig(fileRouter)} />
+                <ReactQueryProvider>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        {children}
+                    </ThemeProvider>
+                </ReactQueryProvider>
+                <Toaster />
+            </body>
+        </html>
+    );
 }
