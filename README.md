@@ -21,7 +21,7 @@
 ### Prerequisites
 - Node.js
 - npm
-
+![image](https://github.com/user-attachments/assets/2fff0a68-ec74-4ce1-b252-09a7575593a9)
 
 ### Installation
 
@@ -52,7 +52,7 @@ make sure you are using port 3000 ```
 
 
 
-![image](https://github.com/user-attachments/assets/2fff0a68-ec74-4ce1-b252-09a7575593a9)
+
 
 
 
