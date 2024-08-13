@@ -21,7 +21,7 @@
 ### Prerequisites
 - Node.js
 - npm
-- PostgreSQL
+
 
 ### Installation
 
@@ -48,4 +48,10 @@ Run the development server:
 
 Copy code
 npm run dev
+make sure you are using port 3000 
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/44fd812a-961e-431b-85b4-22b763b413a8)
+![image](https://github.com/user-attachments/assets/672b96db-15ed-45c9-88d1-0b89a44ef366)
+
 
