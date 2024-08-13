@@ -1,9 +1,10 @@
 {
   "pages": {
-    "/(main)/notifications/page": [
+    "/(main)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(main)/notifications/page.js"
+      "static/css/app/(main)/page.css",
+      "static/chunks/app/(main)/page.js"
     ],
     "/(main)/layout": [
       "static/chunks/webpack.js",
@@ -31,22 +32,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/loading.js"
     ],
-    "/(main)/messages/page": [
+    "/(auth)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(main)/messages/page.js"
+      "static/chunks/app/(auth)/login/page.js"
     ],
-    "/(main)/page": [
+    "/(auth)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(main)/page.css",
-      "static/chunks/app/(main)/page.js"
-    ],
-    "/(main)/users/[username]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(main)/users/[username]/page.css",
-      "static/chunks/app/(main)/users/[username]/page.js"
+      "static/chunks/app/(auth)/layout.js"
     ]
   }
 }

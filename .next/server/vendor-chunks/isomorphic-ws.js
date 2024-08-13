@@ -11,16 +11,6 @@ exports.id = "vendor-chunks/isomorphic-ws";
 exports.ids = ["vendor-chunks/isomorphic-ws"];
 exports.modules = {
 
-/***/ "(action-browser)/./node_modules/isomorphic-ws/node.js":
-/*!********************************************!*\
-  !*** ./node_modules/isomorphic-ws/node.js ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("\n\nmodule.exports = __webpack_require__(/*! ws */ \"(action-browser)/./node_modules/ws/index.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFjdGlvbi1icm93c2VyKS8uL25vZGVfbW9kdWxlcy9pc29tb3JwaGljLXdzL25vZGUuanMiLCJtYXBwaW5ncyI6IkFBQWE7O0FBRWIsNkZBQThCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmV4dGpzLTE1LXNvY2lhbC1tZWRpYS1hcHAvLi9ub2RlX21vZHVsZXMvaXNvbW9ycGhpYy13cy9ub2RlLmpzPzBhMTEiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5cbm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnd3MnKTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(action-browser)/./node_modules/isomorphic-ws/node.js\n");
-
-/***/ }),
-
 /***/ "(rsc)/./node_modules/isomorphic-ws/node.js":
 /*!********************************************!*\
   !*** ./node_modules/isomorphic-ws/node.js ***!

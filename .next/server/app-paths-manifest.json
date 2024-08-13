@@ -1,9 +1,7 @@
 {
-  "/api/messages/unread-count/route": "app/api/messages/unread-count/route.js",
-  "/api/notifications/unread-count/route": "app/api/notifications/unread-count/route.js",
-  "/api/posts/for-you/route": "app/api/posts/for-you/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(main)/notifications/page": "app/(main)/notifications/page.js",
+  "/api/auth/callback/google/route": "app/api/auth/callback/google/route.js",
   "/(main)/page": "app/(main)/page.js",
-  "/(main)/users/[username]/page": "app/(main)/users/[username]/page.js"
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(auth)/login/google/route": "app/(auth)/login/google/route.js"
 }
